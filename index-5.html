@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Veritrade — Your Track Record. Broker-Verified. Unfakeable.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,700;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #FAFAF8;
+  --white: #FFFFFF;
+  --ink: #111110;
+  --ink2: #3D3D3A;
+  --muted: #78716C;
+  --muted2: #A8A29E;
+  --border: #E7E5E4;
+  --border2: #D6D3D1;
+  --amber: #B45309;
+  --amber-bg: #FFFBEB;
+  --amber-border: #FDE68A;
+  --amber-mid: #D97706;
+  --green: #059669;
+  --green-bg: #ECFDF5;
+  --red: #DC2626;
+  --red-bg: #FEF2F2;
+  --blue: #2563EB;
+  --surface: #F5F5F4;
+  --radius: 10px;
+  --radius-lg: 16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;width:100%;z-index:200;
+  background:rgba(250,250,248,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 40px;
+  height:62px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:9px;
+  font-family:'Fraunces',serif;
+  font-weight:700;font-size:18px;
+  color:var(--ink);text-decoration:none;
+  letter-spacing:-0.3px;
+}
+.logo-mark{
+  width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.nav-links{display:flex;align-items:center;gap:6px;}
+.nav-links a{
+  color:var(--muted);font-size:13.5px;font-weight:500;
+  text-decoration:none;padding:6px 12px;border-radius:6px;
+  transition:all .15s;
+}
+.nav-links a:hover{color:var(--ink);background:var(--surface);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.btn-ghost{
+  color:var(--ink2);font-size:13.5px;font-weight:600;
+  text-decoration:none;padding:7px 16px;border-radius:7px;
+  border:1px solid var(--border2);background:var(--white);
+  transition:all .15s;cursor:pointer;font-family:inherit;
+}
+.btn-ghost:hover{border-color:var(--muted2);}
+.btn-main{
+  background:var(--ink);color:var(--white);
+  font-size:13.5px;font-weight:600;
+  text-decoration:none;padding:7px 18px;border-radius:7px;
+  border:none;transition:all .15s;cursor:pointer;
+  font-family:inherit;display:inline-flex;align-items:center;gap:6px;
+}
+.btn-main:hover{background:#2C2C2A;transform:translateY(-1px);}
+.btn-main-lg{
+  background:var(--ink);color:var(--white);
+  font-size:15px;font-weight:700;
+  text-decoration:none;padding:13px 28px;border-radius:9px;
+  border:none;transition:all .2s;cursor:pointer;
+  font-family:inherit;display:inline-flex;align-items:center;gap:8px;
+  letter-spacing:-0.2px;
+}
+.btn-main-lg:hover{background:#2C2C2A;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.18);}
+.btn-outline-lg{
+  font-size:15px;font-weight:600;color:var(--ink2);
+  text-decoration:none;padding:13px 24px;border-radius:9px;
+  border:1px solid var(--border2);background:var(--white);
+  transition:all .2s;cursor:pointer;font-family:inherit;
+}
+.btn-outline-lg:hover{border-color:var(--muted2);transform:translateY(-2px);}
+
+/* ── HERO ── */
+.hero{
+  padding:130px 40px 80px;
+  max-width:1120px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;
+  align-items:center;
+}
+.hero-left{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--green-bg);
+  border:1px solid #A7F3D0;
+  padding:5px 12px;border-radius:100px;
+  font-size:12px;font-weight:600;color:var(--green);
+  margin-bottom:24px;font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.3px;
+}
+.hero-badge-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--green);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(40px,4.8vw,58px);
+  font-weight:900;
+  line-height:1.06;
+  letter-spacing:-2px;
+  color:var(--ink);
+  margin-bottom:20px;
+}
+h1 .accent{color:var(--amber);}
+h1 .italic{font-style:italic;}
+.hero-sub{
+  font-size:17px;color:var(--muted);
+  line-height:1.7;max-width:480px;
+  margin-bottom:32px;
+}
+.hero-sub strong{color:var(--ink2);font-weight:600;}
+.hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:40px;}
+.hero-trust{
+  display:flex;align-items:center;gap:8px;
+  font-size:12.5px;color:var(--muted);
+  font-family:'JetBrains Mono',monospace;
+}
+.trust-divider{color:var(--border2);}
+
+/* ── HERO CARD ── */
+.hero-right{}
+.hero-card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:0 4px 6px rgba(0,0,0,0.04), 0 20px 60px rgba(0,0,0,0.08);
+}
+.card-header{
+  padding:16px 20px;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--white);
+}
+.card-team{display:flex;align-items:center;gap:10px;}
+.team-avatar{
+  width:34px;height:34px;border-radius:8px;
+  background:linear-gradient(135deg,#B45309,#D97706);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-weight:700;font-size:12px;color:#fff;
+  flex-shrink:0;
+}
+.team-name{font-weight:700;font-size:14px;color:var(--ink);}
+.team-sub{font-size:11.5px;color:var(--muted);}
+.verified-pill{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--green-bg);border:1px solid #A7F3D0;
+  padding:4px 10px;border-radius:100px;
+  font-size:11px;font-weight:600;color:var(--green);
+  font-family:'JetBrains Mono',monospace;
+}
+.card-metrics{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-bottom:1px solid var(--border);
+}
+.metric{padding:14px 16px;border-right:1px solid var(--border);}
+.metric:last-child{border-right:none;}
+.metric-label{font-size:10px;color:var(--muted2);text-transform:uppercase;letter-spacing:1px;font-family:'JetBrains Mono',monospace;margin-bottom:4px;}
+.metric-val{font-size:19px;font-weight:700;font-family:'Fraunces',serif;letter-spacing:-0.5px;}
+.metric-val.up{color:var(--green);}
+.metric-val.warn{color:var(--red);}
+.metric-val.amber{color:var(--amber);}
+.metric-sub{font-size:10.5px;color:var(--muted2);margin-top:1px;}
+.card-chart{padding:16px 20px 12px;}
+.chart-label{font-size:10.5px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
+.card-trades{border-top:1px solid var(--border);}
+.trades-head{
+  display:grid;grid-template-columns:2fr 60px 80px 80px 80px;
+  gap:8px;padding:8px 16px;
+  font-size:10px;color:var(--muted2);
+  text-transform:uppercase;letter-spacing:1px;
+  font-family:'JetBrains Mono',monospace;
+  background:var(--surface);
+}
+.trade-row{
+  display:grid;grid-template-columns:2fr 60px 80px 80px 80px;
+  gap:8px;padding:9px 16px;font-size:12.5px;
+  border-top:1px solid var(--border);
+  align-items:center;
+}
+.trade-row:first-child{border-top:none;}
+.tag{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;
+  font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;
+}
+.tag.buy{background:var(--green-bg);color:var(--green);}
+.tag.sell{background:var(--red-bg);color:var(--red);}
+.pnl-up{color:var(--green);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:12px;}
+.pnl-dn{color:var(--red);font-weight:600;font-family:'JetBrains Mono',monospace;font-size:12px;}
+.sym{font-weight:600;font-size:13px;}
+
+/* ── SOCIAL PROOF BAR ── */
+.proof-bar{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:24px 40px;
+  display:flex;justify-content:center;align-items:center;
+  background:var(--white);
+}
+
+/* ── SECTION COMMONS ── */
+.section{padding:88px 40px;}
+.section-inner{max-width:1080px;margin:0 auto;}
+.kicker{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11.5px;font-weight:700;color:var(--amber);
+  text-transform:uppercase;letter-spacing:2px;
+  font-family:'JetBrains Mono',monospace;
+  margin-bottom:14px;
+}
+.kicker-line{width:20px;height:1.5px;background:var(--amber);border-radius:2px;}
+h2{
+  font-family:'Fraunces',serif;
+  font-size:clamp(30px,3.5vw,44px);
+  font-weight:900;letter-spacing:-1.5px;
+  line-height:1.1;color:var(--ink);
+  margin-bottom:16px;
+}
+h2 .italic{font-style:italic;color:var(--amber);}
+.section-sub{font-size:17px;color:var(--muted);line-height:1.7;max-width:520px;}
+
+/* ── PROBLEM ── */
+.problem-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:0;}
+.problem-left{}
+.pain-cards{display:flex;flex-direction:column;gap:10px;margin-top:32px;}
+.pain-card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius);padding:16px 18px;
+  display:flex;gap:12px;align-items:flex-start;
+  transition:border-color .2s;
+}
+.pain-card:hover{border-color:var(--red);}
+.pain-card.solved{background:var(--green-bg);border-color:#A7F3D0;}
+.pain-card.solved:hover{border-color:var(--green);}
+.pain-icon{flex-shrink:0;margin-top:1px;}
+.pain-title{font-weight:700;font-size:13.5px;color:var(--ink);margin-bottom:3px;}
+.pain-desc{font-size:12.5px;color:var(--muted);line-height:1.55;}
+.problem-right{}
+.problem-stat{
+  background:var(--ink);border-radius:var(--radius-lg);
+  padding:32px;color:var(--white);margin-bottom:16px;
+}
+.stat-num{font-family:'Fraunces',serif;font-size:52px;font-weight:900;letter-spacing:-2px;line-height:1;color:var(--amber-mid);margin-bottom:10px;}
+.stat-label{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.6;}
+.stat-label strong{color:var(--white);}
+.problem-quote{
+  background:var(--amber-bg);border:1px solid var(--amber-border);
+  border-radius:var(--radius);padding:20px;
+}
+.quote-text{font-size:14px;color:var(--ink2);line-height:1.65;font-style:italic;margin-bottom:10px;}
+.quote-attr{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
+
+/* ── WHO ── */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+.who-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:28px;
+  transition:all .2s;position:relative;overflow:hidden;
+}
+.who-card:hover{border-color:var(--amber-mid);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.08);}
+.who-icon-wrap{
+  width:44px;height:44px;border-radius:10px;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+}
+.who-title{font-weight:700;font-size:16px;color:var(--ink);margin-bottom:6px;}
+.who-desc{font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:14px;}
+.who-pain-box{
+  background:var(--amber-bg);border:1px solid var(--amber-border);
+  border-radius:7px;padding:10px 12px;
+  font-size:12px;color:var(--amber);
+  font-family:'JetBrains Mono',monospace;line-height:1.5;
+}
+
+/* ── HOW ── */
+.how-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;position:relative;}
+.how-connector{
+  position:absolute;top:22px;left:12%;right:12%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--border2),var(--border2),transparent);
+}
+.how-step{padding:0 16px;text-align:center;}
+.how-num{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--white);border:1.5px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+  font-weight:500;color:var(--amber);
+  margin:0 auto 18px;position:relative;z-index:1;
+}
+.how-title{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:6px;}
+.how-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* ── FEATURES ── */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px;}
+.feat-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:var(--radius);padding:22px;
+  transition:all .2s;
+}
+.feat-card:hover{border-color:var(--amber-mid);box-shadow:0 4px 16px rgba(0,0,0,0.06);}
+.feat-icon-wrap{
+  width:40px;height:40px;border-radius:9px;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:14px;
+}
+.feat-title{font-weight:700;font-size:14px;color:var(--ink);margin-bottom:5px;}
+.feat-desc{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ── FUTURES BANNER ── */
+.futures-banner{
+  background:var(--ink);border-radius:var(--radius-lg);
+  padding:32px 36px;
+  display:flex;align-items:center;gap:28px;
+  margin-top:16px;
+}
+.futures-icon{flex-shrink:0;}
+.futures-text .tag-row{
+  font-size:10.5px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--amber-mid);font-family:'JetBrains Mono',monospace;
+  margin-bottom:6px;
+}
+.futures-text h3{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--white);letter-spacing:-0.5px;margin-bottom:6px;}
+.futures-text p{font-size:13.5px;color:rgba(255,255,255,0.6);line-height:1.6;}
+.futures-text p strong{color:var(--amber-mid);}
+
+/* ── PRICING ── */
+.pricing-section{background:var(--white);border-top:1px solid var(--border);}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;}
+.price-card{
+  background:var(--bg);border:1.5px solid var(--border);
+  border-radius:var(--radius-lg);padding:28px;
+  position:relative;transition:all .2s;
+}
+.price-card:hover{transform:translateY(-3px);}
+.price-card.featured{
+  background:var(--ink);border-color:var(--ink);
+  color:var(--white);
+}
+.price-popular{
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:var(--amber-mid);color:var(--white);
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 14px;border-radius:0 0 8px 8px;
+  font-family:'JetBrains Mono',monospace;
+}
+.price-who{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:16px;}
+.price-card.featured .price-who{color:rgba(255,255,255,0.5);}
+.price-amount{font-family:'Fraunces',serif;font-size:44px;font-weight:900;letter-spacing:-2px;line-height:1;color:var(--ink);}
+.price-card.featured .price-amount{color:var(--white);}
+.price-per{font-size:13px;color:var(--muted);margin-bottom:20px;}
+.price-card.featured .price-per{color:rgba(255,255,255,0.5);}
+.price-name{font-weight:700;font-size:17px;margin-bottom:6px;color:var(--ink);}
+.price-card.featured .price-name{color:var(--white);}
+.price-features{margin-top:20px;display:flex;flex-direction:column;gap:9px;padding-top:20px;border-top:1px solid var(--border);}
+.price-card.featured .price-features{border-top-color:rgba(255,255,255,0.12);}
+.price-feat{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--ink2);}
+.price-card.featured .price-feat{color:rgba(255,255,255,0.8);}
+.price-trial{
+  margin-top:20px;padding:10px 14px;
+  background:var(--green-bg);border:1px solid #A7F3D0;
+  border-radius:7px;font-size:12px;color:var(--green);
+  font-family:'JetBrains Mono',monospace;text-align:center;font-weight:600;
+}
+.price-card.featured .price-trial{background:rgba(5,150,105,0.2);border-color:rgba(5,150,105,0.4);color:#34D399;}
+.pricing-note{
+  margin-top:20px;text-align:center;
+  font-size:13px;color:var(--muted);
+  font-family:'JetBrains Mono',monospace;
+}
+.pricing-note strong{color:var(--ink2);}
+
+/* ── BETA CTA ── */
+.cta-section{
+  padding:100px 40px;
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.cta-glow{
+  position:absolute;top:-30%;left:50%;transform:translateX(-50%);
+  width:800px;height:600px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(180,83,9,0.18),transparent 65%);
+  pointer-events:none;
+}
+.cta-inner{max-width:640px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.cta-inner h2{color:var(--white);letter-spacing:-1.5px;}
+.cta-inner h2 .italic{color:var(--amber-mid);}
+.cta-sub{font-size:17px;color:rgba(255,255,255,0.55);line-height:1.7;max-width:480px;margin:16px auto 40px;}
+.email-form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
+.email-input{
+  flex:1;min-width:220px;
+  background:rgba(255,255,255,0.08);
+  border:1.5px solid rgba(255,255,255,0.15);
+  color:var(--white);padding:13px 18px;border-radius:9px;
+  font-size:14.5px;outline:none;font-family:'Plus Jakarta Sans',sans-serif;
+  transition:border-color .2s;
+}
+.email-input::placeholder{color:rgba(255,255,255,0.3);}
+.email-input:focus{border-color:rgba(255,255,255,0.35);}
+.cta-success{
+  padding:18px 32px;
+  background:rgba(5,150,105,0.15);border:1px solid rgba(5,150,105,0.4);
+  border-radius:10px;color:#34D399;font-size:15px;line-height:1.6;
+  display:inline-block;
+}
+.cta-error{margin-top:12px;color:#FCA5A5;font-size:13px;}
+.founding-perks{
+  margin-top:22px;
+  display:flex;justify-content:center;gap:20px;flex-wrap:wrap;
+}
+.perk{
+  display:flex;align-items:center;gap:5px;
+  font-size:12px;color:rgba(255,255,255,0.4);
+  font-family:'JetBrains Mono',monospace;
+}
+.perk-dot{color:var(--amber-mid);}
+
+/* ── FOOTER ── */
+.footer{
+  background:var(--white);
+  border-top:1px solid var(--border);
+  padding:32px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.footer-logo{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Fraunces',serif;font-weight:700;font-size:16px;
+  color:var(--ink);text-decoration:none;
+}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{color:var(--muted);font-size:13px;text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:var(--ink);}
+.disclaimer{
+  background:var(--bg);border-top:1px solid var(--border);
+  padding:16px 40px;
+}
+.disclaimer p{font-size:10.5px;color:var(--muted2);line-height:1.7;font-family:'JetBrains Mono',monospace;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .65s ease both;}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}.d5{animation-delay:.4s}
+
+/* ── BROKER CHIPS ── */
+.broker-chip {
+  display:inline-flex;align-items:center;gap:5px;
+  padding:7px 14px;
+  border:1px solid var(--border);border-radius:100px;
+  font-size:12px;font-weight:600;color:var(--ink2);
+  background:var(--white);margin:4px;
+  transition:all .15s;white-space:nowrap;
+}
+.broker-chip:hover{border-color:var(--amber-mid);color:var(--amber);}
+.broker-chip.otc{color:var(--muted);border-color:var(--border);}
+.broker-chip.otc:hover{border-color:var(--muted2);}
+.otc-tag{
+  font-size:9px;font-weight:700;letter-spacing:1px;
+  background:var(--surface);color:var(--muted);
+  padding:1px 5px;border-radius:3px;
+  font-family:'JetBrains Mono',monospace;
+}
+.proof-bar{justify-content:center;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .hero{grid-template-columns:1fr;padding:110px 24px 60px;gap:40px;}
+  .problem-grid{grid-template-columns:1fr;}
+  .who-grid{grid-template-columns:1fr;}
+  .how-steps{grid-template-columns:repeat(2,1fr);gap:28px;}
+  .how-connector{display:none;}
+  .feat-grid{grid-template-columns:1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .proof-items{flex-wrap:wrap;}
+  .proof-item{flex:1;min-width:120px;}
+  .futures-banner{flex-direction:column;}
+  .footer{flex-direction:column;padding:24px;}
+  .section{padding:64px 24px;}
+  .cta-section{padding:72px 24px;}
+  .proof-bar{padding:20px 24px;}
+  .nav{padding:0 20px;}
+  .disclaimer{padding:14px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <!-- LOGO MARK: Shield with checkmark + chart line -->
+    <div class="logo-mark">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#111110"/>
+        <!-- Shield shape -->
+        <path d="M16 5L7 9V16C7 20.97 11.02 25.57 16 27C20.98 25.57 25 20.97 25 16V9L16 5Z" fill="#B45309" opacity="0.15"/>
+        <path d="M16 5L7 9V16C7 20.97 11.02 25.57 16 27C20.98 25.57 25 20.97 25 16V9L16 5Z" stroke="#D97706" stroke-width="1.2" fill="none"/>
+        <!-- Checkmark -->
+        <path d="M12 16L14.5 18.5L20 13" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    Veritrade
+  </a>
+
+  <div class="nav-links">
+    <a href="#problem">Why It Matters</a>
+    <a href="#who">Who It&apos;s For</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#" class="btn-ghost">Sign In</a>
+    <a href="#beta" class="btn-main">
+      Start Free Trial
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M10.5 6.5L7.5 3.5M10.5 6.5L7.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section style="padding-top:62px;">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge fade-up">
+        <span class="hero-badge-dot"></span>
+        Beta Open · Limited Spots
+      </div>
+
+      <h1 class="fade-up d1">
+        Your Track Record.<br/>
+        <span class="italic">Broker&#8209;Verified.</span><br/>
+        <span class="accent">Unfakeable.</span>
+      </h1>
+
+      <p class="hero-sub fade-up d2">
+        Trading academies and signal groups lose clients every day because
+        <strong>people don't trust screenshots.</strong>
+        Veritrade connects directly to your broker and creates a tamper-proof,
+        permanently timestamped track record — impossible to fake, easy to share.
+      </p>
+
+      <div class="hero-actions fade-up d3">
+        <a href="#beta" class="btn-main-lg">
+          Get Verified Free — 7 Days
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9.5 4.5M13 8L9.5 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#problem" class="btn-outline-lg">See How It Works</a>
+      </div>
+
+      <div class="hero-trust fade-up d4">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 3.5V7C2 9.97 4.24 12.73 7 13.5C9.76 12.73 12 9.97 12 7V3.5L7 1Z" stroke="#059669" stroke-width="1.3" fill="none"/><path d="M5 7L6.5 8.5L9.5 5.5" stroke="#059669" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        No credit card required
+        <span class="trust-divider">·</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#78716C" stroke-width="1.3"/><path d="M7 4.5V7L8.5 8.5" stroke="#78716C" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Cancel anytime
+        <span class="trust-divider">·</span>
+        Read-only broker access
+      </div>
+    </div>
+
+    <!-- HERO CARD — fake dashboard preview -->
+    <div class="hero-right fade-up d2">
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="card-team">
+            <div class="team-avatar">AB</div>
+            <div>
+              <div class="team-name">AlphaBull Capital</div>
+              <div class="team-sub">Forex · MT5 · 11 members</div>
+            </div>
+          </div>
+          <div class="verified-pill">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5L1 2.5V5C1 7.2 2.78 9.2 5 9.8C7.22 9.2 9 7.2 9 5V2.5L5 0.5Z" fill="#059669" opacity="0.2"/><path d="M5 0.5L1 2.5V5C1 7.2 2.78 9.2 5 9.8C7.22 9.2 9 7.2 9 5V2.5L5 0.5Z" stroke="#059669" stroke-width="0.8" fill="none"/><path d="M3.2 5L4.2 6L6.8 3.5" stroke="#059669" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Verified Live
+          </div>
+        </div>
+
+        <div class="card-metrics">
+          <div class="metric">
+            <div class="metric-label">Total P&L</div>
+            <div class="metric-val up">+$48,320</div>
+            <div class="metric-sub">↑ 12.4% this month</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Win Rate</div>
+            <div class="metric-val amber">68.3%</div>
+            <div class="metric-sub">247 trades</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Max DD</div>
+            <div class="metric-val warn">−8.2%</div>
+            <div class="metric-sub">Controlled</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Rep Score</div>
+            <div class="metric-val amber">847</div>
+            <div class="metric-sub">Top 5%</div>
+          </div>
+        </div>
+
+        <div class="card-chart">
+          <div class="chart-label">EQUITY CURVE — 847 DAYS VERIFIED</div>
+          <svg width="100%" height="72" viewBox="0 0 480 72" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#059669" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 58 L30 55 L60 52 L90 54 L120 48 L150 44 L180 40 L210 43 L240 36 L270 32 L300 29 L330 34 L360 25 L390 20 L420 15 L450 12 L480 8 L480 72 L0 72Z" fill="url(#g1)"/>
+            <path d="M0 58 L30 55 L60 52 L90 54 L120 48 L150 44 L180 40 L210 43 L240 36 L270 32 L300 29 L330 34 L360 25 L390 20 L420 15 L450 12 L480 8" fill="none" stroke="#059669" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="card-trades">
+          <div class="trades-head">
+            <span>SYMBOL</span><span>DIR</span><span>ENTRY</span><span>EXIT</span><span>P&amp;L</span>
+          </div>
+          <div class="trade-row">
+            <span class="sym">XAUUSD</span>
+            <span><span class="tag buy">BUY</span></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">2318.40</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">2341.20</span>
+            <span class="pnl-up">+$1,240</span>
+          </div>
+          <div class="trade-row">
+            <span class="sym">EURUSD</span>
+            <span><span class="tag sell">SELL</span></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">1.0842</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">1.0811</span>
+            <span class="pnl-up">+$620</span>
+          </div>
+          <div class="trade-row">
+            <span class="sym">BTCUSDT</span>
+            <span><span class="tag buy">BUY</span></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">67,420</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:12px">66,890</span>
+            <span class="pnl-dn">−$318</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROOF BAR ── -->
+<div class="proof-bar">
+  <div style="width:100%;max-width:1080px;">
+    <div style="font-size:11px;color:var(--muted2);text-align:center;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">Works with your broker — MT4/MT5 · Crypto · Futures · OTC Platforms</div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0;">
+      <!-- Forex Brokers -->
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Exness
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        IC Markets
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Pepperstone
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        XM
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        HFM / HotForex
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        FXTM
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        OctaFX
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        FxPro
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Tickmill
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="2" stroke="#059669" stroke-width="1.2"/><path d="M4.5 7L6 8.5L9.5 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Binance
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="2" stroke="#059669" stroke-width="1.2"/><path d="M4.5 7L6 8.5L9.5 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Bybit
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="2" stroke="#059669" stroke-width="1.2"/><path d="M4.5 7L6 8.5L9.5 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Coinbase Pro
+      </div>
+      <!-- OTC / Binary - CSV only, labelled clearly -->
+      <div class="broker-chip otc">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="5" width="10" height="7" rx="1.5" stroke="#78716C" stroke-width="1.2"/><path d="M5 5V4a2 2 0 014 0v1" stroke="#78716C" stroke-width="1.2"/></svg>
+        Pocket Option <span class="otc-tag">CSV</span>
+      </div>
+      <div class="broker-chip otc">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="5" width="10" height="7" rx="1.5" stroke="#78716C" stroke-width="1.2"/><path d="M5 5V4a2 2 0 014 0v1" stroke="#78716C" stroke-width="1.2"/></svg>
+        IQ Option <span class="otc-tag">CSV</span>
+      </div>
+      <div class="broker-chip otc">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="5" width="10" height="7" rx="1.5" stroke="#78716C" stroke-width="1.2"/><path d="M5 5V4a2 2 0 014 0v1" stroke="#78716C" stroke-width="1.2"/></svg>
+        Expert Option <span class="otc-tag">CSV</span>
+      </div>
+      <div class="broker-chip">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#B45309" stroke-width="1.2"/><path d="M4 7h6M7 4v6" stroke="#B45309" stroke-width="1.2" stroke-linecap="round"/></svg>
+        + Any MT4/MT5 Broker
+      </div>
+    </div>
+    <div style="margin-top:14px;text-align:center;font-size:11px;color:var(--muted2);font-family:'JetBrains Mono',monospace;">
+      <span style="color:#B45309">●</span> Auto-Verified via API &nbsp;&nbsp; 
+      <span style="color:#78716C">●</span> CSV Upload — Self-Reported Badge
+    </div>
+  </div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section id="problem" class="section problem-section">
+  <div class="section-inner">
+    <div class="problem-grid">
+      <div class="problem-left">
+        <div class="kicker"><span class="kicker-line"></span>The Problem</div>
+        <h2>The trading industry has a <span class="italic">credibility crisis.</span></h2>
+        <p class="section-sub">Every day, academy owners and signal group leaders lose students and revenue — not because they can't trade, but because they can't <em>prove</em> it.</p>
+
+        <div class="pain-cards">
+          <div class="pain-card">
+            <div class="pain-icon">
+              <!-- X circle icon -->
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.5" stroke="#DC2626" stroke-width="1.3"/><path d="M7.5 7.5L12.5 12.5M12.5 7.5L7.5 12.5" stroke="#DC2626" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="pain-title">"How do I know you didn't edit that screenshot?"</div>
+              <div class="pain-desc">A potential student sees your results. They doubt you. They buy from someone who fakes results more convincingly. You lost real revenue to a fraud.</div>
+            </div>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.5" stroke="#DC2626" stroke-width="1.3"/><path d="M7.5 7.5L12.5 12.5M12.5 7.5L7.5 12.5" stroke="#DC2626" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="pain-title">"Show me a third-party audited track record."</div>
+              <div class="pain-desc">An allocator or serious investor asks for verified history. You have nothing to give them. That opportunity — and that capital — goes elsewhere.</div>
+            </div>
+          </div>
+          <div class="pain-card">
+            <div class="pain-icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.5" stroke="#DC2626" stroke-width="1.3"/><path d="M7.5 7.5L12.5 12.5M12.5 7.5L7.5 12.5" stroke="#DC2626" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="pain-title">Fraud in signal groups poisons trust for everyone.</div>
+              <div class="pain-desc">Even when you're legitimate, the reputation of the entire market is damaged by bad actors. Your potential clients can't tell you apart.</div>
+            </div>
+          </div>
+          <div class="pain-card solved">
+            <div class="pain-icon">
+              <!-- Shield check -->
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 5.5V10C3 14.14 6.18 17.93 10 19C13.82 17.93 17 14.14 17 10V5.5L10 2Z" fill="#059669" opacity="0.2"/><path d="M10 2L3 5.5V10C3 14.14 6.18 17.93 10 19C13.82 17.93 17 14.14 17 10V5.5L10 2Z" stroke="#059669" stroke-width="1.3" fill="none"/><path d="M7 10L9 12L13 8" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="pain-title" style="color:#065F46;">One link. Broker-verified. Timestamped. Unfakeable.</div>
+              <div class="pain-desc" style="color:#047857;">Share your Veritrade profile. Every trade pulled directly from your broker, locked permanently. No edits possible — ever.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="problem-right">
+        <div class="problem-stat">
+          <div class="stat-num">1 in 3</div>
+          <div class="stat-label">Signal groups online are estimated to be <strong>unreliable or outright fraudulent.</strong> Your legitimate operation pays the credibility price for their fraud.</div>
+        </div>
+        <div class="problem-quote">
+          <div class="quote-text">"I spent 6 months building a Telegram group to 400 members. One person posted 'I can't verify your results are real' and 80 people left in 48 hours. I had no way to prove anything."</div>
+          <div class="quote-attr">— Forex signal group leader, 2024 · The problem Veritrade solves</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO IT'S FOR ── -->
+<section id="who" class="section">
+  <div class="section-inner">
+    <div class="kicker"><span class="kicker-line"></span>Who It&apos;s For</div>
+    <h2>Built for traders who need to <span class="italic">prove it.</span></h2>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon-wrap">
+          <!-- Graduation cap / academy -->
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L2 7.5L11 12L20 7.5L11 3Z" stroke="#B45309" stroke-width="1.4" stroke-linejoin="round" fill="none"/><path d="M5 10V15.5C5 15.5 7.2 18 11 18C14.8 18 17 15.5 17 15.5V10" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 7.5V13" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="who-title">Trading Academy Owners</div>
+        <div class="who-desc">You charge students $200–$2,000 to learn from you. Your biggest conversion blocker is trust. A verified track record removes that objection permanently.</div>
+        <div class="who-pain">PAIN → "I lost 20 signups last month because people didn't believe my results were real."</div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-icon-wrap">
+          <!-- Signal / broadcast -->
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="12" r="2.5" stroke="#B45309" stroke-width="1.4"/><path d="M7.5 8.5C8.5 7.5 9.7 7 11 7C12.3 7 13.5 7.5 14.5 8.5" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/><path d="M5 6C6.7 4.3 8.7 3.5 11 3.5C13.3 3.5 15.3 4.3 17 6" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/><path d="M11 14.5V18" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="who-title">Signal Group Leaders</div>
+        <div class="who-desc">You run a paid Telegram or Discord. One fraud accusation — even false — can destroy everything you built. Verification is your permanent shield.</div>
+        <div class="who-pain">PAIN → "My competitor got exposed as fake. Now everyone questions all signal groups — including mine."</div>
+      </div>
+
+      <div class="who-card">
+        <div class="who-icon-wrap">
+          <!-- Team/users -->
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="8" cy="8" r="3" stroke="#B45309" stroke-width="1.4"/><path d="M2 18C2 15.24 4.69 13 8 13" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/><circle cx="15" cy="8" r="3" stroke="#B45309" stroke-width="1.4"/><path d="M20 18C20 15.24 17.31 13 14 13" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="who-title">Collaborative Trading Teams</div>
+        <div class="who-desc">You trade as a team — prop group, partnership, or family office. You need a shared verified track record to attract allocators and show collective performance.</div>
+        <div class="who-pain">PAIN → "We need to show investors our 3-year team record. There's no platform for collaborative track records."</div>
+      </div>
+    </div>
+
+    <!-- OTC NOTE -->
+    <div style="margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 20px;display:flex;gap:12px;align-items:flex-start;">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;margin-top:1px"><circle cx="9" cy="9" r="7.5" stroke="#78716C" stroke-width="1.2"/><path d="M9 6v4M9 12v.5" stroke="#78716C" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--ink2);margin-bottom:3px;">Pocket Option, IQ Option &amp; Expert Option — Supported via CSV Upload</div>
+        <div style="font-size:12.5px;color:var(--muted);line-height:1.6;">These OTC/binary platforms don't offer official read-only APIs, so we support them via CSV export from your account history. Your profile receives a <strong style="color:var(--ink2)">Self-Reported ✓</strong> badge — clearly labelled, still valuable as a transparency tool. Full API auto-verification will follow if these platforms open their APIs.</div>
+      </div>
+    </div>
+
+    <!-- FUTURES BANNER -->
+    <div class="futures-banner">
+      <div class="futures-icon">
+        <!-- Candlestick chart -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="7" height="16" rx="1.5" stroke="#D97706" stroke-width="1.5" fill="rgba(217,119,6,0.1)"/><line x1="11.5" y1="12" x2="11.5" y2="18" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/><line x1="11.5" y1="34" x2="11.5" y2="40" stroke="#D97706" stroke-width="1.5" stroke-linecap="round"/><rect x="20" y="24" width="7" height="10" rx="1.5" stroke="#059669" stroke-width="1.5" fill="rgba(5,150,105,0.1)"/><line x1="23.5" y1="18" x2="23.5" y2="24" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><line x1="23.5" y1="34" x2="23.5" y2="38" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><rect x="32" y="14" width="7" height="20" rx="1.5" stroke="#059669" stroke-width="1.5" fill="rgba(5,150,105,0.1)"/><line x1="35.5" y1="8" x2="35.5" y2="14" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><line x1="35.5" y1="34" x2="35.5" y2="40" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="futures-text">
+        <div class="tag-row">// First-Ever · Futures Traders</div>
+        <h3>NinjaTrader, TradeStation, Tradovate, Rithmic, Topstep, Apex?</h3>
+        <p>No verified track record platform has ever existed for futures traders — until now. Upload your broker statement for a Self-Reported badge immediately. <strong>Full API auto-verification coming in Phase 1.5.</strong> You are our priority.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section how-section">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <div class="kicker" style="justify-content:center"><span class="kicker-line"></span>How It Works<span class="kicker-line"></span></div>
+      <h2>Verified in 4 steps. <span class="italic">Live in minutes.</span></h2>
+    </div>
+    <div class="how-steps">
+      <div class="how-connector"></div>
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <!-- User plus icon -->
+        <div style="margin-bottom:12px">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto;display:block"><circle cx="11" cy="9" r="4.5" stroke="#B45309" stroke-width="1.4"/><path d="M3 22C3 18.13 6.58 15 11 15" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/><path d="M20 16V22M17 19H23" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="how-title">Create Your Team</div>
+        <div class="how-desc">Sign up and create your trading team profile — name, trading style, visibility. Done in 2 minutes.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <div style="margin-bottom:12px">
+          <!-- Link/connect icon -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto;display:block"><path d="M11 17L17 11" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/><path d="M8 14L6 16C4.34 17.66 4.34 20.34 6 22C7.66 23.66 10.34 23.66 12 22L14 20" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" fill="none"/><path d="M14 8L16 6C17.66 4.34 20.34 4.34 22 6C23.66 7.66 23.66 10.34 22 12L20 14" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="how-title">Connect Your Broker</div>
+        <div class="how-desc">Enter your MT4/MT5 investor password or Binance/Bybit read-only API. We pull your full account history.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <div style="margin-bottom:12px">
+          <!-- Shield verified icon -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto;display:block"><path d="M14 3L4 8V14C4 19.52 8.24 24.74 14 26.5C19.76 24.74 24 19.52 24 14V8L14 3Z" stroke="#B45309" stroke-width="1.4" fill="none"/><path d="M10 14L12.5 16.5L18 11" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="how-title">Get Verified</div>
+        <div class="how-desc">We confirm it's a live account — not demo — stamp every trade, and lock history permanently. Cannot be altered.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <div style="margin-bottom:12px">
+          <!-- Share icon -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" style="margin:0 auto;display:block"><circle cx="21" cy="7" r="2.5" stroke="#B45309" stroke-width="1.4"/><circle cx="21" cy="21" r="2.5" stroke="#B45309" stroke-width="1.4"/><circle cx="7" cy="14" r="2.5" stroke="#B45309" stroke-width="1.4"/><path d="M9.5 12.5L18.5 8.5M9.5 15.5L18.5 19.5" stroke="#B45309" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="how-title">Share Your Profile</div>
+        <div class="how-desc">One link. Your verified public profile is live. Share it everywhere — let your real results do the selling for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features" class="section">
+  <div class="section-inner">
+    <div class="kicker"><span class="kicker-line"></span>Features</div>
+    <h2>Everything built around <span class="italic">one goal:</span> trust.</h2>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- Lock -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="4" y="9" width="12" height="9" rx="2" stroke="#B45309" stroke-width="1.3"/><path d="M7 9V6.5C7 4.57 8.34 3 10 3C11.66 3 13 4.57 13 6.5V9" stroke="#B45309" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="13.5" r="1.2" fill="#B45309"/></svg>
+        </div>
+        <div class="feat-title">Tamper-Proof History</div>
+        <div class="feat-desc">Trade data pulled directly from your broker and locked permanently. Nobody — including you — can edit or delete a trade after import.</div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- Shield check -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 5.5V10C3 14.14 6.18 17.93 10 19C13.82 17.93 17 14.14 17 10V5.5L10 2Z" stroke="#B45309" stroke-width="1.3" fill="none"/><path d="M7 10L9 12L13 8" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="feat-title">Live Account Verification</div>
+        <div class="feat-desc">We detect the difference between demo and live accounts automatically. Only real live accounts receive the Verified Live badge.</div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- People / team -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="7" cy="7" r="3" stroke="#B45309" stroke-width="1.3"/><path d="M1.5 17C1.5 14.52 4.02 12.5 7 12.5C7.69 12.5 8.36 12.61 8.97 12.82" stroke="#B45309" stroke-width="1.3" stroke-linecap="round"/><circle cx="14" cy="9" r="2.5" stroke="#B45309" stroke-width="1.3"/><path d="M10.5 17C10.5 14.79 12.02 13 14 13C15.98 13 17.5 14.79 17.5 17" stroke="#B45309" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="feat-title">Team Accounts</div>
+        <div class="feat-desc">The only platform built for trading teams. Assign roles — Lead Trader, Analyst, Observer. Build one collective verified track record.</div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- Chart line trending up -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 14L7 9L10.5 12L15 6L18 8" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 6H18V9" stroke="#B45309" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="feat-title">Full Performance Analytics</div>
+        <div class="feat-desc">Total P&L, win rate, max drawdown, profit factor, R:R ratio, equity curve, consistency score. Everything an allocator wants to see.</div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- Star/badge -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="#B45309" stroke-width="1.3" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="feat-title">Reputation Score</div>
+        <div class="feat-desc">A 0–1000 score built from account age, track record length, consistency, and community trust. Immutable — cannot be gamed by deleting history.</div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon-wrap">
+          <!-- Document with lines -->
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 2H5C4.45 2 4 2.45 4 3V17C4 17.55 4.45 18 5 18H15C15.55 18 16 17.55 16 17V5L13 2Z" stroke="#B45309" stroke-width="1.3"/><path d="M13 2V5H16" stroke="#B45309" stroke-width="1.3"/><line x1="7" y1="9" x2="13" y2="9" stroke="#B45309" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="12" x2="11" y2="12" stroke="#B45309" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="feat-title">Annotated Trade Logs</div>
+        <div class="feat-desc">Add rationale, setup tags, and chart screenshots to each trade. Build a professional trading journal that proves your methodology.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── BETA CTA ── -->
+<section id="beta" class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <!-- Pricing signal -->
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:10px 18px;margin-bottom:28px;flex-wrap:wrap;justify-content:center;">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#D97706" stroke-width="1.2"/><path d="M7 4v3.5l2 1.5" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <span style="font-size:12px;color:rgba(255,255,255,0.5);font-family:'JetBrains Mono',monospace;letter-spacing:0.5px;">Pricing announced at launch · Shaped by what our beta community tells us · Free during beta</span>
+    </div>
+    <div class="kicker" style="justify-content:center;color:#D97706">
+      <span class="kicker-line" style="background:#D97706"></span>
+      Beta — Limited Spots
+      <span class="kicker-line" style="background:#D97706"></span>
+    </div>
+    <h2>
+      Stop losing clients<br/>
+      <span class="italic">because they can't verify you.</span>
+    </h2>
+    <p class="cta-sub">
+      Join the beta free. Be among the first trading teams, academies, and signal groups
+      with a broker-verified track record. Your competitors don't have this yet.
+    </p>
+
+    <form class="email-form" id="waitlistForm" onsubmit="submitWaitlist(event)">
+      <!-- Web3Forms: get your free access key at web3forms.com -->
+      <input type="hidden" name="access_key" value="b1a83891-9692-4f87-8b62-0a8b7405752c"/>
+      <input type="hidden" name="subject" value="New Veritrade Beta Signup"/>
+      <input type="hidden" name="from_name" value="Veritrade Waitlist"/>
+      <input
+        type="email"
+        name="email"
+        class="email-input"
+        placeholder="your@email.com"
+        id="emailInput"
+        required
+      />
+      <button type="submit" class="btn-main-lg" id="submitBtn" style="background:#D97706">
+        <span id="btnText">Join Beta Waitlist</span>
+        <svg id="btnArrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9.5 4.5M13 8L9.5 11.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+
+    <div id="waitlistSuccess" style="display:none;margin-top:16px;">
+      <div class="cta-success">
+        ✓ You're on the list! Check your inbox — welcome email on its way.<br/>
+        <span style="font-size:13px;opacity:0.75">Founding member rate locked in. We'll be in touch soon.</span>
+      </div>
+    </div>
+    <div id="waitlistError" style="display:none;margin-top:10px;color:#FCA5A5;font-size:13px;font-family:'JetBrains Mono',monospace;"></div>
+
+    <div class="founding-perks" style="margin-top:20px;">
+      <div class="perk"><span class="perk-dot">✦</span> No credit card required</div>
+      <div class="perk"><span class="perk-dot">✦</span> Free beta access</div>
+      <div class="perk"><span class="perk-dot">✦</span> Founding member rate locked</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DISCORD COMMUNITY BANNER ── -->
+<section style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 40px;overflow:hidden;">
+  <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:flex-start;max-width:560px;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#5865F2;text-transform:uppercase;letter-spacing:2px;font-family:'JetBrains Mono',monospace;margin-bottom:14px;">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="3" width="12" height="8" rx="2" stroke="#5865F2" stroke-width="1.3"/><circle cx="4.5" cy="7" r="1.2" fill="#5865F2"/><circle cx="9.5" cy="7" r="1.2" fill="#5865F2"/></svg>
+        Beta Community
+      </div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(26px,3vw,36px);font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:14px;color:var(--ink);">
+        Join our Discord.<br/>
+        <span style="font-style:italic;color:#5865F2;">Shape what we build.</span>
+      </h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:24px;">
+        Get beta access before anyone else. Talk directly to the founders. 
+        Vote on features. Report bugs. Help us build the track record platform 
+        the trading world actually needs.
+      </p>
+      <a href="https://discord.gg/uYsuAqDHRH" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#5865F2;color:white;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#4752C4'" onmouseout="this.style.background='#5865F2'">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3.5" width="14" height="9" rx="2.5" stroke="white" stroke-width="1.4"/><circle cx="5" cy="8" r="1.4" fill="white"/><circle cx="11" cy="8" r="1.4" fill="white"/></svg>
+        Join Beta Discord — Free
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FEATURE SUGGESTION ── -->
+<section style="background:var(--bg);border-bottom:1px solid var(--border);padding:64px 40px;">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:2px;font-family:'JetBrains Mono',monospace;margin-bottom:14px;">
+      <span style="width:20px;height:1.5px;background:var(--amber);display:inline-block;border-radius:2px;"></span>
+      Shape the Product
+      <span style="width:20px;height:1.5px;background:var(--amber);display:inline-block;border-radius:2px;"></span>
+    </div>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(26px,3vw,38px);font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:12px;">
+      What should we build <span style="font-style:italic;color:var(--amber);">next?</span>
+    </h2>
+    <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:36px;">
+      Veritrade is built for traders, by traders. If there's a feature that would make 
+      your trading life better — tell us. The best suggestions go straight onto the roadmap.
+    </p>
+
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;text-align:left;">
+      <form id="suggestionForm" onsubmit="submitSuggestion(event)">
+        <input type="hidden" name="access_key" value="b1a83891-9692-4f87-8b62-0a8b7405752c"/>
+        <input type="hidden" name="subject" value="Veritrade Feature Suggestion"/>
+        <input type="hidden" name="from_name" value="Veritrade Suggestions"/>
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:7px;">What would you like Veritrade to do?</label>
+          <textarea
+            name="suggestion"
+            placeholder="e.g. I want to connect my Deriv account and show verified results to my Telegram group... or I need a way to let investors see my team's historical performance across multiple brokers..."
+            style="width:100%;min-height:110px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:13px 15px;font-size:14px;color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;resize:vertical;outline:none;line-height:1.6;transition:border-color .2s;"
+            onfocus="this.style.borderColor='#D97706'"
+            onblur="this.style.borderColor='var(--border)'"
+          ></textarea>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com (optional — we'll update you when it's built)"
+            style="flex:1;min-width:220px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:11px 15px;font-size:13.5px;color:var(--ink);font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:border-color .2s;"
+            onfocus="this.style.borderColor='#D97706'"
+            onblur="this.style.borderColor='var(--border)'"
+          />
+          <button type="submit" style="background:var(--ink);color:white;padding:11px 22px;border-radius:8px;font-size:13.5px;font-weight:700;border:none;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;white-space:nowrap;transition:all .2s;" onmouseover="this.style.background='#2C2C2A'" onmouseout="this.style.background='var(--ink)'">
+            Submit Idea →
+          </button>
+        </div>
+      </form>
+      <div id="suggestionSuccess" style="display:none;margin-top:16px;padding:12px 16px;background:var(--green-bg);border:1px solid #A7F3D0;border-radius:8px;font-size:13px;color:var(--green);">
+        ✓ Thank you — your suggestion is noted. We review every single one.
+      </div>
+      <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="#059669" stroke-width="1.2"/><path d="M4 6.5L5.5 8L9 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          We read every suggestion
+        </div>
+        <div style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="#059669" stroke-width="1.2"/><path d="M4 6.5L5.5 8L9 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Top ideas go on the roadmap
+        </div>
+        <div style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="#059669" stroke-width="1.2"/><path d="M4 6.5L5.5 8L9 5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          We'll credit you as a contributor
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <a href="/" class="footer-logo">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#111110"/><path d="M16 5L7 9V16C7 20.97 11.02 25.57 16 27C20.98 25.57 25 20.97 25 16V9L16 5Z" stroke="#D97706" stroke-width="1.2" fill="rgba(180,83,9,0.15)"/><path d="M12 16L14.5 18.5L20 13" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Veritrade
+  </a>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+
+<div class="disclaimer">
+  <p>⚠ DISCLAIMER: Veritrade is a transparency and verification SaaS tool only. It does not provide investment advice, manage funds, execute trades, or introduce investors to traders. All performance data is historical and not indicative of future results. Past performance does not guarantee future performance. Veritrade connects to broker accounts via strictly read-only access and cannot place, modify, or cancel trades. Use of this platform does not constitute financial advice of any kind.</p>
+</div>
+
+<script>
+// ── WAITLIST FORM ──
+async function submitWaitlist(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const btnArrow = document.getElementById('btnArrow');
+  const success = document.getElementById('waitlistSuccess');
+  const error = document.getElementById('waitlistError');
+
+  btnText.textContent = 'Joining...';
+  btn.disabled = true;
+  btnArrow.style.display = 'none';
+  error.style.display = 'none';
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+
+    if (result.success) {
+      document.getElementById('waitlistForm').style.display = 'none';
+      success.style.display = 'block';
+    } else {
+      throw new Error(result.message || 'Something went wrong');
+    }
+  } catch (err) {
+    btnText.textContent = 'Join Beta Waitlist';
+    btnArrow.style.display = 'inline';
+    btn.disabled = false;
+    error.textContent = '⚠ ' + err.message + ' — please try again.';
+    error.style.display = 'block';
+  }
+}
+
+// ── SUGGESTION FORM ──
+async function submitSuggestion(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const success = document.getElementById('suggestionSuccess');
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+
+    if (result.success) {
+      e.target.reset();
+      success.style.display = 'block';
+      btn.textContent = 'Submitted ✓';
+      setTimeout(() => {
+        success.style.display = 'none';
+        btn.textContent = 'Submit Idea →';
+        btn.disabled = false;
+      }, 4000);
+    } else {
+      throw new Error(result.message || 'Failed to send');
+    }
+  } catch (err) {
+    btn.textContent = 'Submit Idea →';
+    btn.disabled = false;
+    alert('Something went wrong — please try again.');
+  }
+}
+</script>
+</body>
+</html>
